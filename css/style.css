@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     text-align: center;
@@ -35,17 +41,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
+    position: relative;
 }
 
 .product-image {
-    max-height: 400px;
-    max-width: 350px;
+    max-height: 500px;
+    max-width: 400px;
     width: auto;
     height: auto;
     object-fit: contain;
+}
+
+.product-image:first-child {
+    position: relative;
+    z-index: 1;
+    transform: translate(-50%, 0%);
+}
+
+.product-image:last-child {
+    position: absolute;
+    left: 60%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .custom-h1 {
@@ -53,20 +72,20 @@ body {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .custom-h2 {
     font-family: "Afacad", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight:500;
     font-style: normal;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: white;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -77,7 +96,7 @@ body {
     font-style: normal;
     font-size: 1.25rem;
     color: white;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.4rem;
     line-height: 1.2;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -143,28 +162,38 @@ body {
 
 @media (max-width: 480px) {
     .container {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem;
+    }
+
+    .logo-container {
+        margin: 0;
     }
 
     .aperol-logo {
-        max-width: 300px;
+        max-width: 320px;
+        
     }
-    
+
     .products-container {
-        flex-direction: column;
-        /* gap: 1rem; */
+        margin: 0;
     }
     
     .product-image {
-        max-height: 250px;
+        max-height: 300px;
+        max-width: 250px;
     }
     
     .custom-h1 {
-        font-size: 2rem;
-        /* margin-bottom: 0.2rem; */
+        font-size: 3rem;
+        margin-bottom: 0;
     }
     
     .custom-body {
+        margin-top: 0.5rem;
         font-size: 1.2rem;
+    }
+
+    .save-offer-button {
+        margin-top: 1.2 rem;
     }
 }
