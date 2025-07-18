@@ -1,0 +1,170 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('../assets/images/Aperol_Background_Orange.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 6rem;
+    margin: 0 auto;
+}
+
+.logo-container {
+    margin-bottom: 1rem;
+}
+
+.aperol-logo {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.product-image {
+    max-height: 400px;
+    max-width: 350px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.custom-h1 {
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.custom-h2 {
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.custom-body {
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.save-offer-button {
+    background-color: white;
+    border-radius: 50px;
+    padding: 12px 72px;
+    display: inline-block;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.save-offer-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.save-offer-button span {
+    font-family: "Afacad", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #e67e22;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .aperol-logo {
+        max-width: 250px;
+    }
+    
+    .products-container {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product-image {
+        max-height: 400px;
+    }
+    
+    .custom-h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .custom-body {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    .aperol-logo {
+        max-width: 300px;
+    }
+    
+    .products-container {
+        flex-direction: column;
+        /* gap: 1rem; */
+    }
+    
+    .product-image {
+        max-height: 250px;
+    }
+    
+    .custom-h1 {
+        font-size: 2rem;
+        /* margin-bottom: 0.2rem; */
+    }
+    
+    .custom-body {
+        font-size: 1.2rem;
+    }
+}
