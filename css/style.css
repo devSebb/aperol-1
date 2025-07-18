@@ -21,9 +21,29 @@ body {
 }
 
 .container {
-    max-width: 1000px;
-    padding: 6rem;
-    margin: 0 auto;
+    max-width: 1400px;
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .logo-container {
@@ -31,18 +51,20 @@ body {
 }
 
 .aperol-logo {
-    max-width: 1000px;
+    max-width: 600px;
     width: 100%;
     height: auto;
     filter: brightness(0) invert(1);
+    margin-bottom: 2rem;
 }
 
 .products-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     position: relative;
+    min-height: 400px;
 }
 
 .product-image {
@@ -67,43 +89,55 @@ body {
     z-index: 2;
 }
 
-.custom-h1 {
+.header-1 {
     font-family: "Afacad", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: white;
-    margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
-.custom-h2 {
+.header-2 {
     font-family: "Afacad", sans-serif;
     font-optical-sizing: auto;
-    font-weight:500;
+    font-weight: 500;
     font-style: normal;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: white;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    line-height: 1.3;
 }
 
-.custom-body {
+.body {
     font-family: "Afacad", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: white;
-    margin-bottom: 0.4rem;
-    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.body-sm {
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 300;
+    color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .content {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 0;
 }
 
 .save-offer-button {
@@ -132,68 +166,150 @@ body {
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 3rem 4rem;
+        gap: 3rem;
+    }
+    
+    .header-1 {
+        font-size: 3rem;
+    }
+    
+    .header-2 {
+        font-size: 1.5rem;
+    }
+    
+    .body {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 1000px;
+        padding: 2.5rem 3rem;
+        gap: 2.5rem;
+    }
+    
+    .left, .right {
+        width: 48%;
+    }
+    
+    .header-1 {
+        font-size: 2.8rem;
+    }
+    
+    .header-2 {
+        font-size: 1.4rem;
+    }
+    
+    .body {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+        max-width: 100%;
+    }
+    
+    .left, .right {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .right {
+        align-items: center;
+    }
+    
+    .content {
+        max-width: 100%;
+        text-align: center;
     }
     
     .aperol-logo {
-        max-width: 250px;
-    }
-    
-    .products-container {
-        gap: 1rem;
-        margin-bottom: 2rem;
-    }
-    
-    .product-image {
-        max-height: 400px;
-    }
-    
-    .custom-h1 {
-        font-size: 2.5rem;
+        max-width: 300px;
         margin-bottom: 1.5rem;
     }
     
-    .custom-body {
-        font-size: 1.1rem;
+    .products-container {
+        margin-bottom: 1.5rem;
+        min-height: 300px;
+    }
+    
+    .product-image {
+        max-height: 350px;
+        max-width: 300px;
+    }
+    
+    .header-1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .header-2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .body {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 2.5rem 1rem;
-    }
-
-    .logo-container {
-        margin: 0;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
     }
 
     .aperol-logo {
         max-width: 320px;
-        
+        margin-bottom: 1rem;
     }
 
     .products-container {
-        margin: 0;
+        margin-bottom: 1rem;
+        min-height: 250px;
     }
     
     .product-image {
-        max-height: 300px;
-        max-width: 250px;
+        max-height: 280px;
+        max-width: 230px;
     }
     
-    .custom-h1 {
-        font-size: 3rem;
-        margin-bottom: 0;
-    }
-    
-    .custom-body {
-        margin-top: 0.5rem;
-        font-size: 1.2rem;
+    .header-1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.1;
     }
 
-    .save-offer-button {
-        margin-top: 1.2 rem;
+    .header-2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.3;
+    }
+    
+    .body {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+
+    .body-sm {
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 }
